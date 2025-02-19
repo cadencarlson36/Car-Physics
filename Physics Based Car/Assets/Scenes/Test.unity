@@ -176,6 +176,7 @@ MonoBehaviour:
   springConstant: 30000
   damperStiffness: 4000
   steerAngle: 0
+  steerTime: 0
   wheelRadius: 0.33
 --- !u!1 &291029327
 GameObject:
@@ -322,6 +323,7 @@ MonoBehaviour:
   springConstant: 30000
   damperStiffness: 4000
   steerAngle: 0
+  steerTime: 20
   wheelRadius: 0.33
 --- !u!1001 &500749648
 PrefabInstance:
@@ -599,7 +601,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &1179995106
 MonoBehaviour:
@@ -613,10 +615,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e33dc13b525493aa63fd5a4bd0c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheels: []
+  wheels:
+  - {fileID: 1378606176}
+  - {fileID: 436751197}
+  - {fileID: 2063549438}
+  - {fileID: 28256586}
   wheelBase: 2.62
   rearTrack: 1.4
-  turnRadius: 12.2
+  turnRadius: 4.25
 --- !u!1 &1378606174
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +676,7 @@ MonoBehaviour:
   springConstant: 30000
   damperStiffness: 4000
   steerAngle: 0
+  steerTime: 20
   wheelRadius: 0.33
 --- !u!1 &1645597755
 GameObject:
@@ -871,6 +878,7 @@ MonoBehaviour:
   springConstant: 30000
   damperStiffness: 4000
   steerAngle: 0
+  steerTime: 0
   wheelRadius: 0.33
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

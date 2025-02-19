@@ -19,13 +19,13 @@ public class CarController : MonoBehaviour
 
         if (steerInput > 0) //turning right
         {
-            leftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + rearTrack / 2)); //wheels use dif right triangles 
-            rightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - rearTrack / 2)); //therefore different lengths for total turn radius
+            leftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput; //wheels use dif right triangles 
+            rightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput; //therefore different lengths for total turn radius
         }
         else if (steerInput < 0) //turning left
         {
-            leftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - rearTrack / 2)); 
-            rightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + rearTrack / 2));
+            leftAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius - (rearTrack / 2))) * steerInput; 
+            rightAngle = Mathf.Rad2Deg * Mathf.Atan(wheelBase / (turnRadius + (rearTrack / 2))) * steerInput;
         }
         else //not turning
         {
